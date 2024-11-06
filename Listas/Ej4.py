@@ -4,8 +4,9 @@ def main(args):
     for i in range(5):
         a=input("Nombre de la asignatura: ")
         b=input("Nota: ")
-        tupla=(a,Decimal(b))
+        tupla=[a,Decimal(b)]
         lista.append((tupla))
+    lista.sort(key=lambda x: x[1], reverse=False)
     print(lista)
     return 0
 if __name__ == '__main__':
