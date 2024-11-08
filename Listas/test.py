@@ -2,7 +2,7 @@ def aprobado(x):
     nombre, nota= x
     if(nota == 8):
         return 0
-    elif(nota <= 5):
+    elif(nota == 9):
         return 1
     return 2
 
