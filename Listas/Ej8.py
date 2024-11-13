@@ -1,7 +1,7 @@
 def createAlumno(lista):
-    a=int(input("Cuantos alumnos hay"))
+    a=int(input("Cuantos alumnos hay "))
     for i in range(0,a):
-        alumno=input("Dame el nombre del alumno")
+        alumno=input("Dame el nombre del alumno ")
         lista.append(alumno)
         createAsignatura(lista,alumno)
 
@@ -19,12 +19,20 @@ def createAsignatura(lista,alumno):
     lista.append(media)
 
 def imprimeLista(lista):
-    print(lista)
+    for i in lista:
+        if type(i) is str:
+            print("Alumno: "+i)
+        elif type(i) is float:
+            print("La nota media es:"+str(i))
+        else:
+            a,b=i
+            print("Asignatura: "+a)
+            print("Nota: "+str(b))
 def main(args):
     lista=list()
     createAlumno(lista)
+    print("-------------------------")
     imprimeLista(lista)
-
     return 0
 if __name__ == '__main__':
     import sys
