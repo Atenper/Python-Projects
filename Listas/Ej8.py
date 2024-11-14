@@ -28,12 +28,15 @@ def imprimeLista(lista):
             a,b=i
             print("Asignatura: "+a)
             print("Nota: "+str(b))
+
 def main(args):
     lista=list()
     createAlumno(lista)
     print("-------------------------")
+    print(lista)
     imprimeLista(lista)
     return 0
+
 if __name__ == '__main__':
     import sys
     sys.exit(main(sys.argv))
