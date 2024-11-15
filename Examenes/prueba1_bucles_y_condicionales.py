@@ -14,7 +14,6 @@ def main(args):
 		elif numero_secreto == guess:
 			c += 1
 			print("Felicidades!!! Has adivinado el numero en ",c," intentos")
-			break;
 		c += 1
 	return 0
 	
