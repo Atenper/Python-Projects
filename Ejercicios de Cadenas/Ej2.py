@@ -1,6 +1,12 @@
 
 def main(args):
-
+    frase=input("Introduce tu frase: ")
+    b=0
+    for i in frase:
+        if i == " ":
+            b+=1
+    print("Espacios contados")
+    print(b)
     return 0
 
 if __name__ == '__main__':
