@@ -1,6 +1,11 @@
 def main(args):
     from decimal import Decimal
-    lista=[['Lengua',Decimal('5.6')],['Mates',Decimal('5.6')]]
+    lista=list()
+    for i in range(5):
+        a=input("Nombre de la asignatura: ")
+        b=input("Nota: ")
+        tupla=[a,Decimal(b)]
+        lista.append((tupla))
     lista.sort(key=lambda x: x[1], reverse=False)
     print("Asignatura---Notas")
     print("--------------------------------")
