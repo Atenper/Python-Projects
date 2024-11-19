@@ -1,6 +1,5 @@
 def verificaip(ip):
     lista = ip.split(".")
-    print(lista[3])
     if lista[0] == "192" and lista[1] == "168" and lista[2] == "1" and 1 < int(lista[3]) < 255:
         print(lista)
         return "La ip es correcta"
