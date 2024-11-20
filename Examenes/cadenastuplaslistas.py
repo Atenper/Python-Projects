@@ -11,10 +11,10 @@ def CreaTuplas(registros):
 
 # Función para filtrar intentos fallidos
 def CuentaFallidos(RegistrosEnTuplas):
-	fallidos=0
+	fallidos=list()
 	for i in range(0,len(RegistrosEnTuplas)):
 		if RegistrosEnTuplas[i][3]=="fallido":
-			fallidos+=1
+			fallidos.append(RegistrosEnTuplas[i])
 	return fallidos
 
 # Función principal. NO PUEDES CAMBIAR NADA DE LA FUNCIÓN PRINCIPAL
