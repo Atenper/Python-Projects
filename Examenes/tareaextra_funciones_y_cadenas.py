@@ -14,7 +14,9 @@ def dominio(email):
 
 def main(args):
     tupla = createUser()
+    tupla2 = createUser()
     print("El dominio es",dominio(tupla[3]))
+    print("El dominio es",dominio(tupla2[3]))
     return 0
 	
 if __name__ == '__main__':

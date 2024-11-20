@@ -6,6 +6,8 @@ def main(args):
         if i == " ":
             b+=1
     print("Espacios contados")
+    i=frase.count(" ")
+    print(i)
     print(b)
     return 0
 
