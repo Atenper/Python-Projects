@@ -5,16 +5,26 @@
 # Función para pasar de cadenas a tuplas
 def CreaTuplas(registros):
 	lista=list()
-	for i in range(0,len(registros)):
-		lista.append(tuple(registros[i].split(" - ")))
-	return lista
+	#for i in range(0,len(registros)):
+	#	lista.append(tuple(registros[i].split(" - ")))
+	for i in registros:
+		lista2 = i.split(" - ")
+		tupla=(lista2[0],lista2[1],lista2[2],lista2[3])
+		lista.append(tupla)
+	
+	ip_ordenadas= sorted([x for x in lista if x[3] == "fallido"],key=lambda x:x[1])
+	return ip_ordenadas
 
 # Función para filtrar intentos fallidos
 def CuentaFallidos(RegistrosEnTuplas):
 	fallidos=list()
-	for i in range(0,len(RegistrosEnTuplas)):
-		if RegistrosEnTuplas[i][3]=="fallido":
-			fallidos.append(RegistrosEnTuplas[i])
+	#for i in range(0,len(RegistrosEnTuplas)):
+	#	if RegistrosEnTuplas[i][3]=="fallido":
+	#		fallidos.append(RegistrosEnTuplas[i])
+	for a,b,c,d in RegistrosEnTuplas:
+		if d == "fallido":
+			t=(a,b,c,d)
+			fallidos.append(t)
 	return fallidos
 
 # Función principal. NO PUEDES CAMBIAR NADA DE LA FUNCIÓN PRINCIPAL
