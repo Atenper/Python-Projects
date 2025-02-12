@@ -10,10 +10,9 @@ def check(x):
     test = re.search(patron, x)
     print(test.group())
 
-
 def main(args):
     patron = sys.argv[1]
-    patron = lectura(patron)
+    patron =lectura(patron)
     check(patron)
     return 0
 if __name__ == '__main__':

@@ -7,10 +7,11 @@ def correocheck(correo):
     return bool(re.match(patron,correo))
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument("correos", nargs='+')
+    parser.add_argument("correos",help="Inserta direcciones de correo", nargs='+')
     args = parser.parse_args()
+    print(args)
     for correo in args.correos:
         if correocheck(correo):
             print(f"{correo} es un correo valido")
         else:
-            print ("cagaste")
+            print (f"{correo} no es un correo valido")

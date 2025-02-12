@@ -7,11 +7,15 @@ def lectura(texto):
     a=f.read()
     f.close()
     return a
-def check(fecha):
-    patron = r'([0-2][0-9]|3[0-1])([\/|-])([0-9]|1[0-2])([\/|-])(\d{2})'
-    fechas = re.finditer(patron,fecha)
-    for match in fechas:
-        print(match.group())
+def check(texto):
+    patron = r'\d{3}[.]\d{3}[.]\d{3}|\d{3}\d{3}\d{3}|\d{3}[-]\d{3}[-]\d{3}'
+    resultado = re.finditer(patron,texto)
+    escritor(resultado)
+
+def escritor(resultado):
+    for match in resultado:
+        with open("salida.txt","a") as archivo:
+            archivo.writelines(f'{match.group()} \n')
 def main(args):
     return 0
 if __name__ == '__main__':
