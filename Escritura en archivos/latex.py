@@ -1,7 +1,7 @@
 from pylatex import Document, Section, Subsection, Command, Tabular, Figure
 from pylatex.utils import NoEscape
 
-#Hacer esto primero
+#Hacer esto primero en la terminal
 #python3 -m venv mi_entorno  # Crear entorno
 #source mi_entorno/bin/activate  # Activar en Linux/Mac
 #mi_entorno\Scripts\activate  # Activar en Windows
