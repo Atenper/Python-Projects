@@ -1,6 +1,8 @@
 from pylatex import Document, Section, Subsection, Command, Tabular, Figure
 from pylatex.utils import NoEscape
 
+#Andres Tenllado Perez
+
 #Hacer esto primero en la terminal
 #python3 -m venv mi_entorno  # Crear entorno
 #source mi_entorno/bin/activate  # Activar en Linux/Mac
@@ -13,7 +15,7 @@ doc = Document(documentclass="article")
 
 # Agregar título, autor y fecha
 doc.preamble.append(Command('title', 'Ejemplo Completo de Documento en LaTeX'))
-doc.preamble.append(Command('author', 'Tu Nombre'))
+doc.preamble.append(Command('author', 'Andres Tenllado Perez'))
 doc.preamble.append(Command('date', NoEscape(r'\today')))
 doc.append(NoEscape(r'\maketitle'))  # Mostrar título en el documento
 
